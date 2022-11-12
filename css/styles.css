@@ -640,7 +640,6 @@ body {
 .modal-close:hover .modal-closwe-icon {
   fill: var(--accent-text-color);
 }
-
 .modal-close:focus .modal-closwe-icon {
   fill: var(--accent-text-color);
 }
@@ -664,15 +663,12 @@ body {
   color: var(--second-text-color);
   margin-bottom: 12px;
 }
-
 .modal-field {
   margin-bottom: 10px;
 }
-
 .input-wrap {
   position: relative;
 }
-
 .modal-icon {
   position: absolute;
   left: 12px;
@@ -709,7 +705,6 @@ body {
 .modal-input:focus {
   border-color: var(--accent-text-color);
 }
-
 .modal-input:focus + .modal-icon {
   fill: var(--accent-text-color);
 }
@@ -740,7 +735,6 @@ body {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .modal-coment:focus {
   border-color: var(--accent-text-color);
 }
@@ -772,7 +766,6 @@ body {
 .checkbox {
   appearance: none;
 }
-
 .label {
   font-weight: 400;
   font-size: 14px;
@@ -784,16 +777,15 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .check-link {
   text-decoration-line: underline;
   color: var(--accent-text-color);
+  margin-left: 5px;
 }
 
 .modal-checked {
   margin-bottom: 30px;
 }
-
 .checked-icon {
   display: inline-block;
   width: 16px;
@@ -806,7 +798,7 @@ body {
 }
 
 .checkbox:checked + .checked-icon {
-  background-image: url(../images/checked/icon-send.svg);
+  background-image: url(../images/svg/check.svg);
   background-color: var(--accent-text-color);
   background-size: contain;
   background-origin: border-box;
@@ -817,12 +809,36 @@ body {
   border-color: var(--accent-text-color);
 }
 
+.check-on {
+  border-radius: 2px;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 250ms var(--cubic);
+}
+
+.check:checked + .check-on {
+  opacity: 1;
+  background-color: var(--accent-color);
+}
+
+.check-off {
+  opacity: 1;
+}
+
+.check:checked ~ .check-off {
+  opacity: 0;
+}
+
+.check-text {
+  font-size: 14px;
+  margin-left: 7px;
+}
+
 /* === FOOTER === */
 .footer {
   background: var(--accent-bgc);
   padding: 60px 0;
 }
-
 .footer-container {
   display: flex;
   gap: 70px;
@@ -893,7 +909,6 @@ body {
   display: flex;
   gap: 10px;
 }
-
 .footer-soc-item {
   width: 44px;
   height: 44px;
@@ -929,6 +944,7 @@ body {
 }
 
 /* --- Form Footer --- */
+
 .footer-btn {
   min-width: 200px;
   height: 50px;
@@ -966,7 +982,6 @@ body {
   text-transform: uppercase;
   color: var(--primary-background-color);
 }
-
 .footer-label-wrap {
   margin-bottom: 20px;
 }
@@ -1002,7 +1017,6 @@ body {
   transition-duration: var(--trans-time);
   transition-timing-function: var(--tnas-funct);
 }
-
 .footer-input:focus {
   border-color: var(--accent-text-color);
 }
